@@ -30,7 +30,7 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: k8s-ldap-dashboard:$(date +%s)
+          tags: k8s-ldap-dashboard:$GITHUB_SHA
 
       - name: Generate artifact attestation
         uses: actions/attest-build-provenance@v1
